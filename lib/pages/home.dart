@@ -18,7 +18,7 @@ class _HomeState extends State<Home> {
   static const feed_url = 'https://www.lavoixdupaysan.net/feed/';
   String _title;
   RssFeed _feed;
-  static const loadingFeedMessage = 'LOADING FEED...';
+  static const loadingFeedMessage = 'Loading feed...';
   static const imageHolderLocation = 'assets/images/no_image.png';
   GlobalKey<RefreshIndicatorState> _refreshKey;
 
@@ -145,7 +145,9 @@ class _HomeState extends State<Home> {
     return Scaffold(
         appBar: AppBar(
           title: Text(_title),
-          // leading: ,
+          /* actions: [
+            IconButton(icon: Icon(Icons.refresh),onPressed: (){})
+          ], */
         ),
         body: body());
   }

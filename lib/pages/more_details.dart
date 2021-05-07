@@ -15,10 +15,10 @@ class MoreDetails extends StatefulWidget {
 }
 
 class _MoreDetailsState extends State<MoreDetails> {
-  dynamic feed;
+  /*  dynamic feed;
 
   int index;
-
+ */
   bool addtoList = false;
 
   void changeFavorite() {
@@ -55,10 +55,10 @@ class _MoreDetailsState extends State<MoreDetails> {
 
   @override
   Widget build(BuildContext context) {
-    dynamic favorite = Provider.of<Favorite>(context);
+    final favorite = Provider.of<Favorite>(context);
     Map<String, dynamic> args = ModalRoute.of(context).settings.arguments;
-    feed = args['feed'];
-    index = args['index'];
+    final feed = args['feed'];
+    int index = args['index'];
     return Scaffold(
       appBar: AppBar(
         title: Text('Plus de details'),
@@ -135,7 +135,7 @@ class _MoreDetailsState extends State<MoreDetails> {
           if (addtoList) {
             favorite.addToFavorite(feed.items[index]);
           } else {
-            favorite.addToFavorite(feed.items[index]);
+            favorite.removeInFavorite(feed.items[index]);
           }
         },
         child: addtoList ? Icon(Icons.star) : Icon(Icons.star_border),
