@@ -1,6 +1,6 @@
 # agritech
 
-A new Flutter project.
+This app keeps you informed about innovations in agriculture based on the website lepaysan.net.
 
 ## Getting Started
 
